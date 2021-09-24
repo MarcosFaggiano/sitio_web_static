@@ -1,0 +1,61 @@
+.header {
+  &__conteiner {
+    background-color: #54b370;
+  }
+  // El conteiner es el espacio verde de arriba, El background-color es el color de fondeo de header
+
+  & {
+    max-width: 100;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 0;
+    padding: 20px 20px;
+    align-items: center;
+    height: 100%;
+    vertical-align: baseline;
+    color: white;
+  }
+  // Esto reprecenta la cajita verde (alaing items-webkitaling-
+
+  &__logo {
+  }
+  // En search modifico la lupita
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    // En imput modifico la cajita
+    &--input {
+      border-radius: 15px;
+      border: none;
+      text-align: center;
+      padding: 0 30px 0 22px;
+    }
+    &--btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0, 95);
+      }
+
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    &--item {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

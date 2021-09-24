@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Esto de abajo va a hacer que el body ocupe todo el espacio, mientras que el boder-sizing es para que los elementos crezcan hacia adentro
+
+body {
+  min-height: 100vh;
+}

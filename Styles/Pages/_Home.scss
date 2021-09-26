@@ -1,0 +1,48 @@
+.hero {
+  height: 700px;
+  // background-image: url("./img/Addidas_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  text-indent: 50px;
+  justify-content: left;
+  padding: 20px 20px;
+  font-size: 40px;
+
+  animation: hero 10s infinite;
+
+  &__card {
+    height: 60px;
+    margin-bottom: 100px;
+    flex-direction: column;
+
+    &--btn {
+      padding: 10px;
+      border: none;
+      background-color: black;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      border-radius: 7.5px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+@keyframes hero {
+  0%,
+  30% {
+    background-image: url("./img/Addidas_1.jpg");
+  }
+  35%,
+  65% {
+    background-image: url("./img/Addidas_2.jpg");
+  }
+  70%,
+  100% {
+    background-image: url("./img/Addidas_3.jpg");
+  }
+}

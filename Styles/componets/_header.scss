@@ -5,7 +5,7 @@
   // El conteiner es el espacio verde de arriba, El background-color es el color de fondeo de header
 
   & {
-    max-width: 100;
+    max-width: 1200;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -19,6 +19,7 @@
   // Esto reprecenta la cajita verde (alaing items-webkitaling-
 
   &__logo {
+    font-size: 30px;
   }
   // En search modifico la lupita
   &__search {
@@ -26,21 +27,18 @@
     align-items: center;
     gap: 20px;
 
-    // En imput modifico la cajita
+    // En imput modifico la cajita de la lupita
     &--input {
       border-radius: 15px;
       border: none;
       text-align: center;
-      padding: 0 30px 0 22px;
+      padding: 5px 60px 5px 60px;
     }
     &--btn {
       border: none;
       background: none;
       cursor: pointer;
-
-      &:active {
-        transform: scale(0, 95);
-      }
+      transition: all 0.6s linear;
 
       img {
         width: 25px;
@@ -52,10 +50,16 @@
     display: flex;
     gap: 10px;
     align-items: center;
-
+    // estos son los items(home, prudustos, contacto)
     &--item {
       text-decoration: none;
       color: white;
+      text-transform: uppercase;
+      transition: color 0.3s linear;
+      // el hover le da el cambio de color cuando pasamos por arriba al home, productos, etc
+      &:hover {
+        color: black;
+      }
     }
   }
 }

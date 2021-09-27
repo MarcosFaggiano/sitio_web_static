@@ -8,6 +8,17 @@
   padding: 30px 0;
   gap: 15px;
 
+  body.dark & {
+    background: rgb(38, 37, 37);
+    box-shadow: rgb(46, 45, 45);
+    img {
+      background-color: snow;
+    }
+    &__title {
+      color: snow;
+    }
+  }
+
   &__title {
     text-transform: uppercase;
   }

@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../main.css" />
+    <script src="../scripts/contact.js" defer></script>
   </head>
   <body>
     <!-- HEADER (el Header conteiner, es para contener lo que vamos a hacer conj nuetro header y es para luego llamarlo con el #)-->
@@ -38,52 +39,89 @@
     <!-- /HEADER -->
     <!-- Heder 2 -->
     <div class="form__initial">
-      <form class="form">
+      <form class="form" id="form">
         <h2 class="form__title">CONTACTO</h2>
         <div class="form__container">
           <div class="form_group">
             <input
               type="text"
-              id="APELLIDO"
+              id="apellido"
+              name="apellido"
               class="form__input"
               placeholder=" "
             />
-            <label for="APELLIDO" class="form__label">APELLIDO</label>
+            <label for="apellido" class="form__label">APELLIDO</label>
             <span class="form_line"></span>
           </div>
 
           <div class="form_grup">
             <input
               type="text"
-              id="NOMBRE"
+              id="nombre"
+              name="nombre"
               class="form__input"
               placeholder=" "
             />
-            <label for="NOMBRE" class="form__label">NOMBRE</label>
+            <label for="nombre" class="form__label">NOMBRE</label>
             <span class="form_line"></span>
           </div>
 
           <div class="form_grup">
             <input
               type="email"
-              id="EMAIL"
+              id="email"
+              name="email"
               class="form__input"
               placeholder=" "
             />
-            <label for="EMAIL" class="form__label">E-MAIL</label>
+            <label for="email" class="form__label">E-MAIL</label>
             <span class="form_line"></span>
           </div>
 
           <div class="form_grup">
             <input
               type="number"
-              id="EDAD"
+              id="edad"
+              name="edad"
               class="form__input"
               placeholder=" "
             />
-            <label for="EDAD" class="form__label">EDAD</label>
+            <label for="edad" class="form__label">EDAD</label>
             <span class="form_line"></span>
           </div>
+
+          <!-- <div class="radio__gral"></div>
+          <legend>Sexo</legend>
+          <input
+            class="radio__imput"
+            type="radio"
+            id="input1"
+            name="Genero"
+            value="Masculino"
+          />
+          Masculino
+          <input
+            class="radio__imput"
+            type="radio"
+            id="input2"
+            name="Genero"
+            value="Femenino"
+          />FEMENINO
+          <input
+            class="radio__imput"
+            type="radio"
+            id="input3"
+            name="Genero"
+            value="Otro"
+          />OTRO -->
+
+          <label class="form__leabel" for="Pais">Pais</label>
+          <select name="pais" id="pais">
+            <option value="Arg">Argentina</option>
+            <option value="Bra">Brazil</option>
+            <option value="Col">Colombia</option>
+            <option value="Ecu">Ecuador</option>
+          </select>
 
           <!-- <input type="submit" value="Enviar" /> -->
           <button class="form__btn" type="button" id="sendBtn">Enviar</button>

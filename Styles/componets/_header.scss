@@ -1,6 +1,11 @@
 .header {
   &__conteiner {
     background-color: #54b370;
+
+    body.dark & {
+      background: rgb(38, 37, 37);
+      box-shadow: rgb(46, 45, 45);
+    }
   }
   // El conteiner es el espacio verde de arriba, El background-color es el color de fondeo de header
 
@@ -60,6 +65,47 @@
       &:hover {
         color: black;
       }
+    }
+  }
+  .swich {
+    background-color: #343058;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    gap: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      background: #f1f1f1;
+      top: 0;
+      left: 0;
+      right: unset;
+      border-radius: 100px;
+      transition: 0.3s ease all;
+      box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+    }
+    &.active {
+      background: orange;
+      color: black;
+      &::after {
+        right: 0;
+        left: unset;
+      }
+    }
+    img {
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      display: block;
+      background: none;
+      color: white;
     }
   }
 }

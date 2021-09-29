@@ -18,3 +18,13 @@ if (localStorage.getItem("dark-mode") === "true") {
   document.body.classList.remove("dark");
   btnSwitch.classList.remove("active");
 }
+// ---------------------------------------------------------------
+// boton hamburgesa aparezca y desaparezca
+
+const menu = document.getElementById("menu");
+const menuBtn = document.getElementById("menuBtn");
+
+const toggleManu = () => {
+  menu.classList.toggle("hidden");
+};
+menuBtn.addEventListener("click", toggleManu);

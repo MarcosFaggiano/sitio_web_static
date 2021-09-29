@@ -1,16 +1,17 @@
 .header {
   &__conteiner {
+    // es el rectangulo verde de arriba
     background-color: #54b370;
+    position: relative;
 
     body.dark & {
       background: rgb(38, 37, 37);
       box-shadow: rgb(46, 45, 45);
     }
   }
-  // El conteiner es el espacio verde de arriba, El background-color es el color de fondeo de header
 
   & {
-    max-width: 1200;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -19,18 +20,33 @@
     align-items: center;
     height: 100%;
     vertical-align: baseline;
-    color: white;
+    color: rgb(43, 43, 44);
   }
-  // Esto reprecenta la cajita verde (alaing items-webkitaling-
-
+  // ------------------------------------------
+  // Esto es el logo
   &__logo {
-    font-size: 30px;
+    font-size: 40px;
+    //  Media: Achica el logo
+
+    body.dark & {
+      color: white;
+    }
+    @media (max-width: 415px) {
+      font-size: 15px;
+    }
   }
-  // En search modifico la lupita
+  // ------------------------------------
+
+  // Esto es el buscador
   &__search {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    // MEDIA: con esto desaparece la lupa
+    @media (max-width: 415px) {
+      display: none;
+    }
 
     // En imput modifico la cajita de la lupita
     &--input {
@@ -39,26 +55,45 @@
       text-align: center;
       padding: 5px 60px 5px 60px;
     }
+
+    // esto es el icono de la lupa
     &--btn {
       border: none;
       background: none;
       cursor: pointer;
       transition: all 0.6s linear;
 
+      // esto es el icono de la lupa
       img {
         width: 25px;
         height: 25px;
       }
     }
   }
+  // -----------------------------------------
+
   &__nav {
+    // estos es LA CAJA DE LOS ITEMS (home, prudustos, contacto) pero la ubicacion general
+
+    position: absolute;
+    top: 100%;
+    background-color: black;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
     display: flex;
-    gap: 10px;
-    align-items: center;
-    // estos son los items(home, prudustos, contacto)
+    justify-content: center;
+    gap: 20px;
+
+    @media (min-width: 415px) {
+      position: static;
+      background-color: rgb(38, 37, 37);
+    }
+
+    //Esto trabaja con los ICONOS Home / contacto / producto
     &--item {
       text-decoration: none;
-      color: white;
+      color: rgb(255, 255, 255);
       text-transform: uppercase;
       transition: color 0.3s linear;
       // el hover le da el cambio de color cuando pasamos por arriba al home, productos, etc
@@ -67,8 +102,27 @@
       }
     }
   }
+  // --------------------------------------------------------------------------------
+
+  //Esto trabaja EL MENU HAMBURGESA
+  &__menuBtn {
+    background-color: white;
+    border-radius: 5px;
+    &:active {
+      img {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (min-width: 415px) {
+      display: none;
+    }
+  }
+
+  // -----------------------------------------------------------------------
+  //Esto trabaja EL BOTON DARK MODE
   .swich {
-    background-color: #343058;
+    background-color: rgb(206, 206, 206);
     border-radius: 1000px;
     border: none;
     position: relative;
@@ -108,4 +162,8 @@
       color: white;
     }
   }
+}
+// ---------------------------------------------------------
+.hidden {
+  display: none;
 }

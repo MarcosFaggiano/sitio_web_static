@@ -6,4 +6,8 @@ body {
   &.dark {
     background: #000;
   }
+
+  @media (max-width: 415px) {
+    background-color: black;
+  }
 }

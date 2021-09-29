@@ -17,11 +17,13 @@
   <body>
     <!-- HEADER (el Header conteiner, es para contener lo que vamos a hacer conj nuetro header y es para luego llamarlo con el #)-->
     <div class="header__conteiner">
-      <div class="header">
+      <header class="header">
+
+              <!-- Esto es el LOGO -->
         <div class="header__logo">
           <h1>M-46</h1>
         </div>
-
+               <!-- Esto es el BUSCADOR -->                 
         <div class="header__search">
           <input class="header__search--input" type="text" />
           <button class="header__search--btn">
@@ -29,30 +31,43 @@
           </button>
         </div>
 
-        <div class="header__nav">
+                 <!--  boton hamburgesa -->
+          <button id="menuBtn" class="header__menuBtn">
+            <img src="./img/menu.svg.svg" alt="" height="30p" width="30p">
+          </button>
+
+              <!-- este es el nav -->
+
+          <nav class=" header__nav" id="menu">
           <a class="header__nav--item" href="/">HOME</a>
           <a class="header__nav--item" href="./Pages/products.html"
             >PRODUCTOS</a
           >
           <a class="header__nav--item" href="./Pages/contact.html">CONTACTO</a>
-        </div>
+        </nav>
+
+
+
+
         <!-- MODO OSCURO -->
 
         <button class="swich" id="switch">
           <img src="./img/sun.png" alt="sun button" />
           <img src="./img/moon.png" alt="sun button" />
-        </button>
-      </div>
+
+
+    </header>
     </div>
     <!-- /HEADER -->
-    hace separador
+
+    hace separador jajajajaja
     <!-- MAIN -->
     <!-- HERO (es una imagen grande que ocupa mucho espacio)-->
     <section class="hero">
-      <!-- <img src=| alt="ArtAddidas" /> -->
+
       <div class="hero__card">
         <div class="hero__card--title">
-          <h2>Life Adidas Icaro</h2>
+          <h2>Life Icaro Shoes</h2>
         </div>
         <div class="hero__card--text">
           <h3>incredible combination of colors for you!</h3>

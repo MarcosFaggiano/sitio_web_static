@@ -308,10 +308,14 @@ body.dark .footer__title {
 .hero__card {
   height: 60px;
   margin-bottom: 100px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+@media (max-width: 415px) {
+  .hero__card {
+    position: relative;
+    right: 105px;
+    bottom: 150px;
+  }
 }
 
 .hero__card--btn {
@@ -347,6 +351,7 @@ body.dark .footer__title {
     color: #4b4b4b;
   }
   .hero__card--btn {
+    text-align: left;
     font-size: 15px;
   }
 }

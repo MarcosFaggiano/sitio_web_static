@@ -17,6 +17,9 @@
   border-radius: 10px;
   box-shadow: 0 5px 10px -5px rgb(0, 0, 0/30%);
   text-align: center;
+  @media (max-width: 415px) {
+    margin: 22px;
+  }
 }
 
 .from__title {
@@ -25,7 +28,7 @@
 }
 
 .form__container {
-  margin-top: 3em;
+  margin-top: 0em;
   display: grid;
   gap: 0.9em;
 }
@@ -72,4 +75,5 @@
   padding: 0.3em 0;
   border-radius: 0.5em;
   border: none;
+  box-shadow: 0 5px 10px -5px rgb(0, 0, 0/30%);
 }
